@@ -1,0 +1,17 @@
+
+    {{>header}}
+    <h3>{{ message }}</h3>
+    <div class="content">
+        <form>
+            <input type="text" placeholder="city/zip">
+            <button>search</button>
+        </form>
+        <span style="color: rgb(90, 90, 90);">must provide a real zip code or city name</span>
+        <div class="weather">
+         <p id='loading'></p>   
+        </div>
+    </div>
+    {{>footer}}
+    <script src="/javascript/app.js"></script>
+</body>
+</html>
