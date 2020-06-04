@@ -7,7 +7,7 @@ userSearch.addEventListener('submit', (e)=>{
     e.preventDefault();
     weather.innerHTML = `<p id=loading>Loading...</p>`
     const location = search.value;
-    fetch(`http://localhost:3000/weather?address=${location}`).then((response) => {
+    fetch(`/weather?address=${location}`).then((response) => {
     response.json().then((data) => {
         if(data.error){
             weather.innerHTML = `<div style="color:red;">${data.error}</div>`;

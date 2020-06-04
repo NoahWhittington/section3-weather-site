@@ -1,6 +1,7 @@
 const path = require('path'),
 express = require('express'),
 app = express(),
+port = process.env.PORT || 3000,
 hbs = require('hbs'),
 request = require('postman-request'),
 geoCode       = require('../utils/geocode'),
@@ -84,6 +85,6 @@ app.get('*', (req,res) => {
     });
 })
 
-app.listen(3000, ()=>{
-    console.log('server listening on port 3000')
+app.listen(port, ()=>{
+    console.log(`Server is on port:${port}`)
 })
