@@ -63,7 +63,9 @@ app.get('/weather', (req, res) => {
             }
             res.send({
                 err,
-                data,
+                weather: data.weather,
+                precip: data.precip,
+                wind: data.wind,
                 name: 'Noah Whittington',
                 address: req.query.address
             });

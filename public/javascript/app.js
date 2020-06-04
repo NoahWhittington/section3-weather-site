@@ -12,7 +12,7 @@ userSearch.addEventListener('submit', (e)=>{
         if(data.error){
             weather.innerHTML = `<div style="color:red;">${data.error}</div>`;
         } else {
-            weather.innerHTML = `<p id=loading></p> <h2> zip/city: ${data.address} </h2> <div>${data.data}</div>`
+            weather.innerHTML = `<p id=loading></p> <h2> zip/city: ${data.address} </h2> <div>${data.weather}<div>${data.wind}</div><div>${data.precip}</div>`
         };
     });
 });

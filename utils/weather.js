@@ -8,7 +8,11 @@ const weatherCall = (geocode, callback) => {
         } else if(body.error) {
             callback('Error: Invalid location')
         } else {
-            callback(undefined, `Currently in ${body.location.name} the weather is ${body.current.weather_descriptions[0]}. It is ${body.current.temperature}℉  and it feels like ${body.current.feelslike}℉  out`);
+            callback(undefined,{
+                weather: `Currently in ${body.location.name} the weather is ${body.current.weather_descriptions[0]}. It is ${body.current.temperature}℉  and it feels like ${body.current.feelslike}℉  out`,
+                wind: `Wind is ${body.current.wind_speed}mph moving ${body.current.wind_dir}`,
+                precip: `rain: ${body.current.precip * 100}% chance`
+            });
         }
     });
 };

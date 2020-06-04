@@ -29,6 +29,9 @@ h3{
     flex-grow: 1;
 }
 img{
-    width:200px;
+    width:300px;
     margin: 0 auto;
+}
+.weather{
+    font-size: 15px;
 }
